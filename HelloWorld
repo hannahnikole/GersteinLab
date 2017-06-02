@@ -1,15 +1,30 @@
+import java.util.*;
 
 public class HelloWorld {
-
-	public static void main(String[] args) {
-		for(int i = 1; i <= 100; i++){
+	
+	static Scanner scan = new Scanner(System.in);
+	static int seconds;
+	//static Date date = new Date();
+	
+	public static void main(String[] args){
 		
-		System.out.println("Hello World!");
+		System.out.println("Enter number of seconds between iterations: ");
+		seconds = scan.nextInt();
+		
+		try{
+			for(int i = 1; i <= 100; i++){
+				Date date = new Date();
+				System.out.println("The time is: " + date);
+				Thread.sleep(seconds*1000);
+			}
 		}
-
-	}
-
-}
+			catch(InterruptedException e){
+				System.out.print(e);
+			} 
+		
+	}//end main 	
+	
+}//class prints out time (100 times) every number of seconds specified by user 
 
 Job script for SLURM:
 #!/bin/bash
