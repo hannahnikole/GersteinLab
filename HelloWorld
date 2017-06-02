@@ -4,7 +4,6 @@ public class HelloWorld {
 	
 	static Scanner scan = new Scanner(System.in);
 	static int seconds;
-	//static Date date = new Date();
 	
 	public static void main(String[] args){
 		
